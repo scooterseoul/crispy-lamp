@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Logo from "../images/logo.png";
 import Login from "../images/icons8-male-user-64.png";
 import Cart from "../images/cart.png";
@@ -9,18 +9,18 @@ const Header = () => {
   return (
     <header className="header">
       <div>
-        <img src={mainpic} className={styles.mainpic}></img>
+        <img src={mainpic} alt="mainpic" className={styles.mainpic}></img>
       </div>
       <div className={styles.headerCont}>
         <div className={styles.logo}>
-          <img src={Logo} className={styles.logopic}></img>
+          <img src={Logo} className={styles.logopic} alt="logo"></img>
         </div>
         <div className={styles.search}>Search</div>
         <div className={styles.login}>
-          <img src={Login} className={styles.loginimg}></img>
+          <img src={Login} alt="login" className={styles.loginimg}></img>
         </div>
         <div className={styles.cart}>
-          <img src={Cart} className={styles.cartimg}></img>
+          <img src={Cart} alt="cart" className={styles.cartimg}></img>
         </div>
       </div>
     </header>
