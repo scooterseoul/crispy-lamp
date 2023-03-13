@@ -38,27 +38,26 @@ const Product = () => {
     <>
       <div>hello000</div>
       <ul className={styles.listCont}>
-        {product.map((product) => {
+        {product.map((item) => {
           return (
-            <div className={styles.cell}>
-              <li key={product.id}>
-                <Link to={"/products/" + product.id}>
-                  <div className={styles.photoCont}>
-                    <img
-                      src={product.image_url}
-                      alt={product.name}
-                      className={styles.photos}
-                    />
-                  </div>
-                </Link>
-                <div className={styles.infoCont}>
-                  <div className={styles.name}>{product.name}</div>
-                  <div className={styles.price}>{product.price}</div>
-                  <div className={styles.country}>{product.country}</div>
-                  <div className={styles.instock}>{product.instock}</div>
+            <li key={item.id}>
+              <div className={styles.cell}>
+                <div className={styles.photoCont}>
+                  <img
+                    src={item.image_url}
+                    alt={item.name}
+                    className={styles.photos}
+                  />
                 </div>
-              </li>
-            </div>
+
+                <div className={styles.infoCont}>
+                  <div className={styles.name}>{item.name}</div>
+                  <div className={styles.price}>{item.price}</div>
+                  <div className={styles.country}>{item.country}</div>
+                  <div className={styles.instock}>{item.instock}</div>
+                </div>
+              </div>
+            </li>
           );
         })}
       </ul>

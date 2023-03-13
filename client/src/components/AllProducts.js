@@ -24,8 +24,8 @@ const AllProducts = () => {
       <ul className={styles.listCont}>
         {products.map((product) => {
           return (
-            <div className={styles.cell}>
-              <li key={product.id}>
+            <li key={product.id}>
+              <div className={styles.cell}>
                 <Link to={"/products/" + product.id}>
                   <div className={styles.photoCont}>
                     <img
@@ -41,8 +41,8 @@ const AllProducts = () => {
                   <div className={styles.country}>{product.country}</div>
                   <div className={styles.instock}>{product.instock}</div>
                 </div>
-              </li>
-            </div>
+              </div>
+            </li>
           );
         })}
       </ul>
