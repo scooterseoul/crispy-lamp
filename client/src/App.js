@@ -9,9 +9,7 @@ const App = () => {
   return (
     <>
       <Header />
-      {/* <div>
-        <img src={mainpic} className={styles.mainpic}></img>
-      </div> */}
+
       <Routes>
         <Route path="/" element={<ProductList />} />
         <Route path="/products/:id" element={<Product />} />
