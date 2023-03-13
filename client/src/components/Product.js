@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "./Product.module.css";
 
 const Product = () => {
@@ -27,7 +27,7 @@ const Product = () => {
   if (isNotFound) {
     return (
       <>
-        <p className="error">Sorry! We can't find that restaurant.</p>
+        <p className="error">Sorry! We can't find that product.</p>
       </>
     );
   }
@@ -36,7 +36,7 @@ const Product = () => {
   }
   return (
     <>
-      <div>hello000</div>
+      {/* <div>hello000</div> */}
       <ul className={styles.listCont}>
         {product.map((item) => {
           return (

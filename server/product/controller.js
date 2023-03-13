@@ -48,6 +48,7 @@ const deleteProduct = (req, res) => {
     });
   });
 };
+
 const updateProduct = (req, res) => {
   const id = parseInt(req.params.id);
   const { name, price, instock, image_url, country } = req.body;
