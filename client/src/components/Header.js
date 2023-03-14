@@ -5,6 +5,8 @@ import Login from "../images/icons8-male-user-64.png";
 import Cart from "../images/cart.png";
 import mainpic from "../images/mainpic2.png";
 
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header className="header">
@@ -15,7 +17,9 @@ const Header = () => {
         <div className={styles.logo}>
           <img src={Logo} className={styles.logopic} alt="logo"></img>
         </div>
-        <div className={styles.search}>Search</div>
+        <div className={styles.addProduct}>
+          <Link to="/add">Add Product</Link>
+        </div>
         <div className={styles.login}>
           <img src={Login} alt="login" className={styles.loginimg}></img>
         </div>

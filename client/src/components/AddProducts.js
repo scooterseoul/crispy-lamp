@@ -89,6 +89,9 @@ const AddProducts = () => {
         </label>
         <button>Add</button>
       </form>
+      <Link to="/" className="button">
+        Return to products
+      </Link>
     </>
   );
 };
