@@ -17,7 +17,7 @@ const getProductById = (req, res) => {
 };
 
 const addProduct = (req, res) => {
-  const { name, price, instock, image_url, country } = req.body;
+  const { name, price, image_url, country } = req.body;
 
   pool.query(queries.checkName, [name], (error, results) => {
     if (results.rows.length) {
@@ -25,7 +25,7 @@ const addProduct = (req, res) => {
     }
     pool.query(
       queries.addProduct,
-      [name, price, instock, image_url, country],
+      [name, price, image_url, country],
       (error, results) => {
         if (error) throw error;
         res.status(201).send("Product added successfully");
@@ -51,7 +51,7 @@ const deleteProduct = (req, res) => {
 
 const updateProduct = (req, res) => {
   const id = parseInt(req.params.id);
-  const { name, price, instock, image_url, country } = req.body;
+  const { name, price, image_url, country } = req.body;
 
   pool.query(queries.getProductById, [id], (error, results) => {
     const noProductFound = !results.rows.length;
@@ -60,7 +60,7 @@ const updateProduct = (req, res) => {
     }
     pool.query(
       queries.updateProduct,
-      [name, id, price, instock, image_url, country],
+      [name, id, price, image_url, country],
       (error, results) => {
         if (error) throw error;
         res.status(200).send("Product has been updated.");
