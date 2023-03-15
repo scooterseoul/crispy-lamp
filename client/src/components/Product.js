@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import styles from "./Product.module.css";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [isNotFound, setIsNotFound] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,11 +34,27 @@ const Product = () => {
         `http://localhost:5000/api/v1/products/${id}`,
         { method: "DELETE" }
       );
-
+      navigate("/");
       console.log(deleteProduct);
     } catch (err) {
       console.error(err.message);
     }
+  };
+  const submit = () => {
+    confirmAlert({
+      title: "Confirm to submit",
+      message: "Are you sure to do this.",
+      buttons: [
+        {
+          label: "Yes",
+          onClick: () => deleteProduct(),
+        },
+        {
+          label: "No",
+          //onClick: () => alert('Click No')
+        },
+      ],
+    });
   };
 
   if (isNotFound) {
@@ -71,7 +91,7 @@ const Product = () => {
 
                 <button
                   className={styles.deletebutton}
-                  onClick={() => deleteProduct(item.id)}
+                  onClick={() => submit(item.id)}
                 >
                   Delete
                 </button>
