@@ -42,8 +42,8 @@ const Product = () => {
   };
   const submit = () => {
     confirmAlert({
-      title: "Confirm to submit",
-      message: "Are you sure to do this.",
+      title: "Delete ???",
+      message: "Are you sure you want to delete?.",
       buttons: [
         {
           label: "Yes",
@@ -86,15 +86,16 @@ const Product = () => {
                   <div className={styles.name}>{item.name}</div>
                   <div className={styles.price}>{item.price}</div>
                   <div className={styles.country}>{item.country}</div>
-                  <div className={styles.instock}>{item.instock}</div>
                 </div>
 
-                <button
-                  className={styles.deletebutton}
-                  onClick={() => submit(item.id)}
-                >
-                  Delete
-                </button>
+                <div>
+                  <button
+                    className={styles.deletebutton}
+                    onClick={() => submit(item.id)}
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
             </li>
           );
