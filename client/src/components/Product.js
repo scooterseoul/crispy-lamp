@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import styles from "./Product.module.css";
 
 const Product = () => {
@@ -7,6 +7,8 @@ const Product = () => {
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [isNotFound, setIsNotFound] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +32,7 @@ const Product = () => {
         `http://localhost:5000/api/v1/products/${id}`,
         { method: "DELETE" }
       );
-
+      navigate("/");
       console.log(deleteProduct);
     } catch (err) {
       console.error(err.message);
