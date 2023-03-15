@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import styles from "./Product.module.css";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 const Product = () => {
   const { id } = useParams();
@@ -38,6 +40,22 @@ const Product = () => {
       console.error(err.message);
     }
   };
+  const submit = () => {
+    confirmAlert({
+      title: "Confirm to submit",
+      message: "Are you sure to do this.",
+      buttons: [
+        {
+          label: "Yes",
+          onClick: () => deleteProduct(),
+        },
+        {
+          label: "No",
+          //onClick: () => alert('Click No')
+        },
+      ],
+    });
+  };
 
   if (isNotFound) {
     return (
@@ -73,7 +91,7 @@ const Product = () => {
 
                 <button
                   className={styles.deletebutton}
-                  onClick={() => deleteProduct(item.id)}
+                  onClick={() => submit(item.id)}
                 >
                   Delete
                 </button>
