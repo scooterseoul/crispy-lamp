@@ -19,6 +19,7 @@ const AllProducts = () => {
   if (isLoading) {
     return <p>Loading...</p>;
   }
+
   return (
     <>
       <ul className={styles.listCont}>
@@ -39,7 +40,6 @@ const AllProducts = () => {
                   <div className={styles.name}>{product.name}</div>
                   <div className={styles.price}>{product.price}</div>
                   <div className={styles.country}>{product.country}</div>
-                  <div className={styles.instock}>{product.instock}</div>
                 </div>
               </div>
             </li>
