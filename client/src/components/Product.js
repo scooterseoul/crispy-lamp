@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import styles from "./Product.module.css";
 
 const Product = () => {
@@ -24,6 +24,19 @@ const Product = () => {
     fetchData();
   }, [id]);
 
+  const deleteProduct = async () => {
+    try {
+      const deleteProduct = await fetch(
+        `http://localhost:5000/api/v1/products/${id}`,
+        { method: "DELETE" }
+      );
+
+      console.log(deleteProduct);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
   if (isNotFound) {
     return (
       <>
@@ -36,7 +49,6 @@ const Product = () => {
   }
   return (
     <>
-      {/* <div>hello000</div> */}
       <ul className={styles.listCont}>
         {product.map((item) => {
           return (
@@ -56,11 +68,21 @@ const Product = () => {
                   <div className={styles.country}>{item.country}</div>
                   <div className={styles.instock}>{item.instock}</div>
                 </div>
+
+                <button
+                  className={styles.deletebutton}
+                  onClick={() => deleteProduct(item.id)}
+                >
+                  Delete
+                </button>
               </div>
             </li>
           );
         })}
       </ul>
+      <Link to="/" className="button">
+        Return to products
+      </Link>
     </>
   );
 };

@@ -17,7 +17,7 @@ const AddProducts = () => {
 
     const body = { name, price, country, image_url };
 
-    const response = await fetch("http://localhost:5000/api/v1/products/", {
+    const response = await fetch("http://localhost:5000/api/v1/products/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

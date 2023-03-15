@@ -1,5 +1,4 @@
 import styles from "./Header.module.css";
-// import { Link } from "react-router-dom";
 import Logo from "../images/logo.png";
 import Login from "../images/icons8-male-user-64.png";
 import Cart from "../images/cart.png";
