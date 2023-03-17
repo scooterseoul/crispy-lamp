@@ -1,0 +1,27 @@
+.popup {
+  position: fixed;
+  top: 15rem;
+  left: 2rem;
+  width: 80%;
+  height: 50vh;
+  background-color: rgb(60, 58, 58);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7rem;
+  box-shadow: 0.8rem 0.85rem 0.8rem 0 rgb(115, 113, 113);
+  color: white;
+}
+.inner {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+}
+.btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  max-width: 2rem;
+}
