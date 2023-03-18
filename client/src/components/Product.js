@@ -4,6 +4,7 @@ import styles from "./Product.module.css";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Pop from "./Popup";
+import Logo from "../images/logo.png";
 
 const Product = () => {
   const { id } = useParams();
@@ -107,138 +108,116 @@ const Product = () => {
 
   return (
     <>
-      <ul className={styles.listCont}>
-        {product.map((item) => {
-          return (
-            <li key={item.id}>
-              <div className={styles.cell}>
-                <div className={styles.photoCont}>
-                  <img
-                    src={item.image_url}
-                    alt={item.name}
-                    className={styles.photos}
-                  />
-                </div>
+      <div className={styles.prodlogo}>
+        <img src={Logo} className={styles.prodlogopic} alt="logo"></img>
+      </div>
 
-                <div className={styles.infoCont}>
-                  <div className={styles.name}>{item.name}</div>
-                  <div className={styles.price}>{item.price}</div>
-                  <div className={styles.country}>{item.country}</div>
-                </div>
-                <div>
-                  <button onClick={() => setButtonPop(true)}>Update</button>
-                  <Pop
-                    trigger={buttonPop}
-                    setTrigger={setButtonPop}
-                    className="popup1"
-                  >
-                    <p className={styles.update}>Update...</p>
-                    <div className={styles.input}>
-                      <div>
-                        <p className={styles.formlabel}>Name</p>
+      <div className={styles.prodCont}>
+        <ul className={styles.listCont1}>
+          {product.map((item) => {
+            return (
+              <li key={item.id}>
+                <div className={styles.cell}>
+                  <div className={styles.photoCont}>
+                    <img
+                      src={item.image_url}
+                      alt={item.name}
+                      className={styles.photos}
+                    />
+                  </div>
+
+                  <div className={styles.infoCont}>
+                    <div className={styles.name}>{item.name}</div>
+                    <div className={styles.price}>{item.price}</div>
+                    <div className={styles.country}>{item.country}</div>
+                  </div>
+                  <div className={styles.prodbtn}>
+                    <button
+                      onClick={() => setButtonPop(true)}
+                      className={styles.updatebtn}
+                    >
+                      Update
+                    </button>
+                    <Pop
+                      trigger={buttonPop}
+                      setTrigger={setButtonPop}
+                      className={styles.popup1}
+                    >
+                      <p className={styles.updatetxt}>Update...</p>
+                      <div className={styles.input}>
+                        <div>
+                          <p className={styles.formlabel}>Name</p>
+                          <input
+                            className={styles.prodinput}
+                            type="text"
+                            value={name}
+                            onChange={(e) => {
+                              setName(e.target.value);
+                            }}
+                          />
+                        </div>
+                        <div>
+                          <p className={styles.formlabel}>Price</p>
+                          <input
+                            className={styles.prodinput}
+                            type="text"
+                            value={price}
+                            onChange={(e) => {
+                              setPrice(e.target.value);
+                            }}
+                          />
+                        </div>
+                        <p className={styles.formlabel}>Country</p>
                         <input
+                          className={styles.prodinput}
                           type="text"
-                          value={name}
+                          value={country}
                           onChange={(e) => {
-                            setName(e.target.value);
+                            setCountry(e.target.value);
                           }}
                         />
-                      </div>
-                      <div>
-                        <p className={styles.formlabel}>Price</p>
-                        <input
-                          type="text"
-                          value={price}
-                          onChange={(e) => {
-                            setPrice(e.target.value);
-                          }}
-                        />
-                      </div>
-                      <p className={styles.formlabel}>Country</p>
-                      <input
-                        type="text"
-                        value={country}
-                        onChange={(e) => {
-                          setCountry(e.target.value);
-                        }}
-                      />
-                      <div>
-                        <p className={styles.formlabel}>URL</p>
-                        <input
-                          type="text"
-                          value={image_url}
-                          onChange={(e) => {
-                            setImage_url(e.target.value);
-                          }}
-                        />
-                      </div>
+                        <div>
+                          <p className={styles.formlabel}>URL</p>
+                          <input
+                            className={styles.prodinput}
+                            type="text"
+                            value={image_url}
+                            onChange={(e) => {
+                              setImage_url(e.target.value);
+                            }}
+                          />
+                        </div>
 
-                      <button
-                        className={styles.submitbtn}
-                        onClick={() => {
-                          updateUser();
-                          refresh();
-                        }}
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </Pop>
-                  <br />
-                  <br />
-                  {/* <button onClick={() => selectProduct(item.id)}>Update</button> */}
-                  {/* <Link to={"/edit/" + item.id}>
-                    <button className={styles.editbutton}>Edit</button>
-                  </Link> */}
+                        <button
+                          className={styles.submitbtn}
+                          onClick={() => {
+                            updateUser();
+                            refresh();
+                          }}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </Pop>
+                  </div>
+                  <div className={styles.delbtn}>
+                    <button
+                      className={styles.deletebutton}
+                      onClick={() => submit(item.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
-                <div>
-                  <button
-                    className={styles.deletebutton}
-                    onClick={() => submit(item.id)}
-                  >
-                    Delete
-                  </button>
-                </div>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-      {/* <div>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
+              </li>
+            );
+          })}
+        </ul>
 
-        <input
-          type="text"
-          value={price}
-          onChange={(e) => {
-            setPrice(e.target.value);
-          }}
-        />
-        <input
-          type="text"
-          value={country}
-          onChange={(e) => {
-            setCountry(e.target.value);
-          }}
-        />
-        <input
-          type="text"
-          value={image_url}
-          onChange={(e) => {
-            setImage_url(e.target.value);
-          }}
-        />
-        <button onClick={updateUser}>Update User</button>
-      </div> */}
-      <Link to="/" className="button">
-        Return to products
-      </Link>
+        <Link to="/" className="rtnbutton">
+          Return to products
+        </Link>
+      </div>
     </>
   );
 };
