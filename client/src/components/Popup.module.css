@@ -1,9 +1,9 @@
 .popup {
   position: fixed;
-  top: 15rem;
+  top: 12rem;
   left: 2rem;
   width: 80%;
-  height: 50vh;
+  height: 55vh;
   background-color: rgb(60, 58, 58);
   display: flex;
   justify-content: center;

@@ -1,6 +1,8 @@
 import styles from "./AllProducts.module.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
+import banner from "../images/banner.png";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -22,10 +24,22 @@ const AllProducts = () => {
 
   return (
     <>
+      <Header />
+      <div className={styles.addProduct}>
+        <button className={styles.addbtn}>
+          <Link to="/add"> + add Candy</Link>
+        </button>
+        <br />
+        <div className={styles.banner}>
+          <Link to="https://damecacao.com/world-chocolate-day/">
+            <img src={banner} className={styles.bannerpic} alt="banner"></img>
+          </Link>
+        </div>
+      </div>
       <ul className={styles.listCont}>
         {products.map((product) => {
           return (
-            <li key={product.id}>
+            <li key={product.id} className={styles.listitem}>
               <div className={styles.cell}>
                 <Link to={"/products/" + product.id}>
                   <div className={styles.photoCont}>
