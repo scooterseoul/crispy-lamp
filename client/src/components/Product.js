@@ -5,6 +5,7 @@ import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Pop from "./Popup";
 import Logo from "../images/logo.png";
+import Backbtn from "../images/icons8-back-arrow-100.png";
 
 const Product = () => {
   const { id } = useParams();
@@ -109,7 +110,9 @@ const Product = () => {
   return (
     <>
       <div className={styles.prodlogo}>
-        <img src={Logo} className={styles.prodlogopic} alt="logo"></img>
+        <Link to="/">
+          <img src={Logo} className={styles.prodlogopic} alt="logo"></img>
+        </Link>
       </div>
 
       <div className={styles.prodCont}>
@@ -131,13 +134,16 @@ const Product = () => {
                     <div className={styles.price}>{item.price}</div>
                     <div className={styles.country}>{item.country}</div>
                   </div>
-                  <div className={styles.prodbtn}>
+                </div>
+                <div className={styles.bottonCont}>
+                  <div className={styles.prodUpdateBtn}>
                     <button
                       onClick={() => setButtonPop(true)}
                       className={styles.updatebtn}
                     >
                       Update
                     </button>
+
                     <Pop
                       trigger={buttonPop}
                       setTrigger={setButtonPop}
@@ -209,14 +215,19 @@ const Product = () => {
                     </button>
                   </div>
                 </div>
+                <div className={styles.rtnbutton}>
+                  <Link to="/">
+                    <img
+                      src={Backbtn}
+                      className={styles.backbtn}
+                      alt="back"
+                    ></img>
+                  </Link>
+                </div>
               </li>
             );
           })}
         </ul>
-
-        <Link to="/" className="rtnbutton">
-          Return to products
-        </Link>
       </div>
     </>
   );
