@@ -5,6 +5,7 @@ header {
 .headerCont {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  box-shadow: 0 0.3rem 0.3rem 0 rgb(181, 180, 180);
 }
 
 .link {
@@ -14,21 +15,19 @@ header {
 }
 .logo {
   padding-left: 0.2rem;
-  padding-top: 0.9rem;
+  padding-top: 0.3rem;
 }
 .logopic {
-  width: 9rem;
+  width: 3rem;
   align-self: center;
 }
-
 .login {
   grid-column-start: 3;
   grid-column-end: 4;
   text-align: right;
-  padding-top: 0.8rem;
+  padding-top: 0.3rem;
   align-self: center;
   padding-right: 0.5rem;
-  /* max-width: fit-content; */
 }
 .loginimg {
   width: 1.3rem;
