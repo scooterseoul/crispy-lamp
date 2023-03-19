@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import banner from "../images/banner.png";
+import Addbtn from "../images/addpink.png";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -26,9 +27,10 @@ const AllProducts = () => {
     <>
       <Header />
       <div className={styles.addProduct}>
-        <button className={styles.addbtn}>
-          <Link to="/add"> + add Candy</Link>
-        </button>
+        <Link to="/add">
+          <img src={Addbtn} className={styles.addbtnpic} alt="add"></img>
+        </Link>
+
         <br />
         <div className={styles.banner}>
           <Link to="https://damecacao.com/world-chocolate-day/">
