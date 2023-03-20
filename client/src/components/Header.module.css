@@ -1,11 +1,45 @@
 header {
-  position: sticky;
-  max-width: 100%;
+  max-width: 100vw;
+  z-index: -1;
 }
 .headerCont {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   box-shadow: 0 0.3rem 0.3rem 0 rgb(181, 180, 180);
+  background: linear-gradient(
+    180deg,
+    rgb(84, 84, 84),
+    rgb(84, 84, 84),
+    rgb(132, 132, 132)
+  );
+  padding-bottom: 3rem;
+}
+.explore {
+  width: 42vw;
+  font-size: 1.5rem;
+  color: white;
+  padding-top: 3rem;
+  padding-left: 1.4rem;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.worldChocCont {
+  padding-top: 1.5rem;
+}
+.worldChoc {
+  width: 7rem;
+  background-color: rgb(84, 84, 84);
+  border-style: solid;
+  box-shadow: 0 0.3rem 0.3rem 0 rgb(43, 40, 40);
+  border-width: 0.07rem;
+  border-color: white;
+  border-radius: 0.5rem;
+  color: white;
 }
 
 .link {
@@ -16,19 +50,69 @@ header {
 .logo {
   padding-left: 0.2rem;
   padding-top: 0.3rem;
+  height: 2rem;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 .logopic {
-  width: 3rem;
+  width: 5.5rem;
   align-self: center;
 }
 .login {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  height: 2rem;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
   text-align: right;
   padding-top: 0.3rem;
-  align-self: center;
   padding-right: 0.5rem;
 }
 .loginimg {
-  width: 1.3rem;
+  width: 1.5rem;
+}
+.circular {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+.circularpic {
+  height: 9rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.8rem 0 rgb(31, 28, 28);
+}
+.choc2 {
+  text-align: right;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-top: 2.3rem;
+}
+.choc2pic {
+  width: 4.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.8rem 0 rgb(31, 28, 28);
+  margin-right: 0.4rem;
+}
+
+.choc3 {
+  text-align: right;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  margin-top: 0.5rem;
+}
+.choc3pic {
+  width: 4.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.8rem 0 rgb(31, 28, 28);
+  margin-right: 0.4rem;
 }

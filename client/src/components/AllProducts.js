@@ -2,8 +2,7 @@ import styles from "./AllProducts.module.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import banner from "../images/banner.png";
-import Addbtn from "../images/addpink.png";
+import Addbtn from "../images/icons8-add-96gray.png";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -30,13 +29,6 @@ const AllProducts = () => {
         <Link to="/add">
           <img src={Addbtn} className={styles.addbtnpic} alt="add"></img>
         </Link>
-
-        <br />
-        <div className={styles.banner}>
-          <Link to="https://damecacao.com/world-chocolate-day/">
-            <img src={banner} className={styles.bannerpic} alt="banner"></img>
-          </Link>
-        </div>
       </div>
       <ul className={styles.listCont}>
         {products.map((product) => {
@@ -54,7 +46,7 @@ const AllProducts = () => {
                 </Link>
                 <div className={styles.infoCont}>
                   <div className={styles.name}>{product.name}</div>
-                  <div className={styles.price}>{product.price}</div>
+                  {/* <div className={styles.price}>{product.price}</div> */}
                   <div className={styles.country}>{product.country}</div>
                 </div>
               </div>

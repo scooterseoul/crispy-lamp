@@ -32,7 +32,7 @@
   padding-right: 1.5rem;
 }
 .updatebtn {
-  background-color: green;
+  background-color: rgb(56, 182, 255);
   color: white;
   border: none;
   border-radius: 0.2rem;
@@ -44,9 +44,10 @@
   padding-left: 1.5rem;
 }
 .deletebutton {
-  background-color: rgb(221, 6, 6);
-  color: white;
-  border: none;
+  background-color: rgb(254, 253, 253);
+  color: rgb(193, 6, 6);
+  border-color: rgb(193, 6, 6);
+  border-style: solid;
   border-radius: 0.2rem;
   text-align: right;
   padding: 0.2rem;
@@ -80,10 +81,13 @@
   width: 80%;
 }
 .submitbtn {
-  background-color: green;
+  background-color: rgb(84, 84, 84);
+  border-style: solid;
+  border-color: white;
+  border-width: 0.1rem;
+  box-shadow: 0 0.3rem 0.3rem 0 rgb(43, 40, 40);
   color: white;
-  border: none;
-  margin-top: 0.7rem;
-  border-radius: 0.2rem;
-  text-align: right;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }

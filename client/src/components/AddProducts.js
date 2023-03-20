@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import styles from "./AddProducts.module.css";
+import Logo from "../images/logo.png";
+import addprod from "../images/addprod.png";
+import Backbtn from "../images/icons8-back-arrow-100.png";
 
 const AddProducts = () => {
   const [name, setName] = useState("");
@@ -47,51 +51,62 @@ const AddProducts = () => {
 
   return (
     <>
-      <div>Add Products</div>
+      <div>
+        <div className={styles.prodlogo}>
+          <Link to="/">
+            <img src={Logo} className={styles.prodlogopic} alt="logo"></img>
+          </Link>
+        </div>
+        <div className={styles.addtext}>
+          <img src={addprod} className={styles.addProd} alt="add"></img>
+        </div>
 
-      <form onSubmit={onFormSubmit}>
-        <label>
-          Name
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          ></input>
-        </label>
-        <label>
-          Price:
-          <input
-            type="number"
-            name="price"
-            placeholder="$"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          ></input>
-        </label>
-        <label>
-          Country
-          <input
-            type="text"
-            name="country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          ></input>
-        </label>
-        <label>
-          URL
-          <input
-            type="text"
-            name="image_url"
-            value={image_url}
-            onChange={(e) => setImage_url(e.target.value)}
-          ></input>
-        </label>
-        <button>Add</button>
-      </form>
-      <Link to="/" className="button">
-        Return to products
-      </Link>
+        <div className={styles.outer}>
+          <form onSubmit={onFormSubmit} className={styles.addCont}>
+            <p className={styles.formlabel}>Name</p>
+            <input
+              type="text"
+              name="name"
+              value={name}
+              className={styles.prodinput}
+              onChange={(e) => setName(e.target.value)}
+            ></input>
+            <p className={styles.formlabel}>Price</p>
+
+            <input
+              type="number"
+              name="price"
+              placeholder="$"
+              value={price}
+              className={styles.prodinput}
+              onChange={(e) => setPrice(e.target.value)}
+            ></input>
+            <p className={styles.formlabel}>Country</p>
+
+            <input
+              type="text"
+              name="country"
+              value={country}
+              className={styles.prodinput}
+              onChange={(e) => setCountry(e.target.value)}
+            ></input>
+            <p className={styles.formlabel}>URL</p>
+
+            <input
+              type="text"
+              name="image_url"
+              value={image_url}
+              className={styles.prodinput}
+              onChange={(e) => setImage_url(e.target.value)}
+            ></input>
+            <br />
+            <button className={styles.addbtn}>Add</button>
+          </form>
+        </div>
+        <Link to="/" className="button">
+          <img src={Backbtn} className={styles.backbtn} alt="back"></img>
+        </Link>
+      </div>
     </>
   );
 };
