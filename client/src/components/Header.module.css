@@ -22,7 +22,6 @@ header {
   color: white;
   padding-top: 3rem;
   padding-left: 1.4rem;
-
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -30,16 +29,18 @@ header {
 }
 .worldChocCont {
   padding-top: 1.5rem;
+  margin-left: -2rem;
 }
 .worldChoc {
-  width: 7rem;
-  background-color: rgb(84, 84, 84);
+  width: 9rem;
+  background-color: rgb(121, 137, 159);
   border-style: solid;
   box-shadow: 0 0.3rem 0.3rem 0 rgb(43, 40, 40);
   border-width: 0.07rem;
   border-color: white;
   border-radius: 0.5rem;
   color: white;
+  padding: 0.5rem;
 }
 
 .link {

@@ -11,7 +11,6 @@ const AddProducts = () => {
   const [country, setCountry] = useState("");
   const [image_url, setImage_url] = useState("");
   const [url_add, setUrl_add] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [errorStatus, setErrorStatus] = useState("");
 
@@ -20,7 +19,7 @@ const AddProducts = () => {
   const onFormSubmit = async (e) => {
     e.preventDefault();
 
-    const body = { name, price, country, image_url };
+    const body = { name, price, country, image_url, url_add };
 
     const response = await fetch("http://localhost:5000/api/v1/products/add", {
       method: "POST",
@@ -33,7 +32,6 @@ const AddProducts = () => {
       setIsError(true);
       setErrorStatus(response.status);
     } else {
-      setIsLoading(false);
       navigate("/");
     }
   };
