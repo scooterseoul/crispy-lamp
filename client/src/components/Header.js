@@ -24,7 +24,7 @@ const Header = () => {
               target="_b
             "
             >
-              <button className={styles.worldChoc}>World Chocolate Day</button>
+              <button className={styles.worldChoc}>World Chocolate Day!</button>
             </Link>
           </div>
         </div>

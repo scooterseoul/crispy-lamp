@@ -22,6 +22,7 @@ header {
   color: white;
   padding-top: 3rem;
   padding-left: 1.4rem;
+
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -29,18 +30,17 @@ header {
 }
 .worldChocCont {
   padding-top: 1.5rem;
-  margin-left: -2rem;
 }
 .worldChoc {
-  width: 9rem;
-  background-color: rgb(121, 137, 159);
+  width: 7rem;
+  background-color: rgb(84, 84, 84);
   border-style: solid;
   box-shadow: 0 0.3rem 0.3rem 0 rgb(43, 40, 40);
   border-width: 0.07rem;
   border-color: white;
   border-radius: 0.5rem;
   color: white;
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 
 .link {
@@ -112,8 +112,15 @@ header {
   margin-top: 0.5rem;
 }
 .choc3pic {
+  /* width: 3rem; */
+  /* margin-right: 0.6rem; */
   width: 4.5rem;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0.8rem 0 rgb(31, 28, 28);
+  /* margin-left: 0.65rem; */
   margin-right: 0.4rem;
+
+  /* border-style: solid;
+  border-color: white;
+  border-width: 0.2rem; */
 }
