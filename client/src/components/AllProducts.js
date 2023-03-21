@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Addbtn from "../images/grayplusborder.png";
+import Footer from "./Footer";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -54,6 +55,7 @@ const AllProducts = () => {
           );
         })}
       </ul>
+      <Footer />
     </>
   );
 };
