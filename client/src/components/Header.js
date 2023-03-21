@@ -19,7 +19,11 @@ const Header = () => {
         <div className={styles.explore}>
           ...explore the world of Sweetness!
           <div className={styles.worldChocCont}>
-            <Link to="https://damecacao.com/world-chocolate-day/">
+            <Link
+              to="https://damecacao.com/world-chocolate-day/"
+              target="_b
+            "
+            >
               <button className={styles.worldChoc}>World Chocolate Day</button>
             </Link>
           </div>

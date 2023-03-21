@@ -5,7 +5,7 @@ import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Pop from "./Popup";
 import Logo from "../images/newlog.png";
-import Backbtn from "../images/icons8-back-arrow-100.png";
+import Backbtn from "../images/icons8-back-arrow-96gray.png";
 
 const Product = () => {
   const { id } = useParams();
@@ -145,15 +145,15 @@ const Product = () => {
                     <Link to={`${item.url_add}`} target="_blank">
                       <button
                         onClick={renderOnClickRight}
-                        className={styles.visit}
+                        className={styles.visitbtn}
                       >
-                        Visit
+                        Take a look!
                       </button>
                     </Link>
                   </div>
                 </div>
                 <div className={styles.bottonCont}>
-                  <div className={styles.prodUpdateBtn}>
+                  <div className={styles.prodUpdateBtnCont}>
                     <button
                       onClick={() => setButtonPop(true)}
                       className={styles.updatebtn}
@@ -243,7 +243,7 @@ const Product = () => {
                     </button>
                   </div>
                 </div>
-                <div className={styles.rtnbutton}>
+                <div>
                   <Link to="/">
                     <img
                       src={Backbtn}
