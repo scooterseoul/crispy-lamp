@@ -1,21 +1,15 @@
 .addProduct {
-  text-align: right;
+  text-align: center;
   align-self: center;
-  padding-top: 0.5rem;
+  margin-top: -1.8rem;
 }
 .addbtnpic {
-  width: 1.7rem;
-  padding-right: 0.3rem;
+  width: 4rem;
 }
-.addbtn a {
-  text-decoration: none;
-}
-.addbtn a:visited {
-  color: white;
-}
+
 .banner {
-  margin-bottom: -0.2rem;
-  margin-top: 0.4rem;
+  margin-bottom: 0.5rem;
+  margin-top: -0.5rem;
 }
 .bannerpic {
   max-width: 100vw;
@@ -29,6 +23,7 @@ li {
   grid-template-columns: 1fr 1fr;
   padding: 0;
   margin: 0;
+
   background-color: rgb(217, 218, 218);
 }
 .listitem {
@@ -53,9 +48,10 @@ li {
   padding-top: 0.2rem;
 }
 .photos {
-  width: 5rem;
-  height: 4rem;
+  /* width: 5rem; */
+  height: 5rem;
   text-align: center;
+  padding-top: 1rem;
 }
 .name {
   font-size: 0.8rem;

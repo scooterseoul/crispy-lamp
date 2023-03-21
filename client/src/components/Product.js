@@ -4,7 +4,7 @@ import styles from "./Product.module.css";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Pop from "./Popup";
-import Logo from "../images/logo.png";
+import Logo from "../images/newlog.png";
 import Backbtn from "../images/icons8-back-arrow-100.png";
 
 const Product = () => {
@@ -16,6 +16,7 @@ const Product = () => {
   const [price, setPrice] = useState();
   const [country, setCountry] = useState("");
   const [image_url, setImage_url] = useState("");
+  const [url_add, setUrl_add] = useState("");
   const [buttonPop, setButtonPop] = useState(false);
 
   const navigate = useNavigate();
@@ -35,8 +36,10 @@ const Product = () => {
       setPrice(data[0].price);
       setCountry(data[0].country);
       setImage_url(data[0].image_url);
+      setUrl_add(data[0].url_add);
       setIsLoading(false);
     };
+
     fetchData();
   }, [id]);
 
@@ -75,9 +78,10 @@ const Product = () => {
     setPrice(item.price);
     setCountry(item.country);
     setImage_url(item.image_url);
+    setUrl_add(item.url_add);
   }
-  function updateUser() {
-    let item = { name, price, country, image_url };
+  function updateItem() {
+    let item = { name, price, country, image_url, url_add };
     console.warn("item", item);
     fetch(`http://localhost:5000/api/v1/products/edit/${id}`, {
       method: "PUT",
@@ -106,6 +110,9 @@ const Product = () => {
   if (isLoading) {
     return <p>Loading...</p>;
   }
+  const renderOnClickRight = (event) => {
+    setUrl_add(url_add);
+  };
 
   return (
     <>
@@ -131,8 +138,18 @@ const Product = () => {
 
                   <div className={styles.infoCont}>
                     <div className={styles.name}>{item.name}</div>
-                    <div className={styles.price}>{item.price}</div>
+                    <div className={styles.price}>Avg. {item.price}</div>
                     <div className={styles.country}>{item.country}</div>
+
+                    {/* <div className={styles.country}>{item.url_add}</div> */}
+                    <Link to={`${item.url_add}`} target="_blank">
+                      <button
+                        onClick={renderOnClickRight}
+                        className={styles.visit}
+                      >
+                        Visit
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className={styles.bottonCont}>
@@ -182,12 +199,23 @@ const Product = () => {
                             setCountry(e.target.value);
                           }}
                         />
+                        <p className={styles.formlabel}>Web Address</p>
+                        <input
+                          className={styles.prodinput}
+                          type="url"
+                          value={url_add}
+                          placeholder="http://www.example.com"
+                          onChange={(e) => {
+                            setUrl_add(e.target.value);
+                          }}
+                        ></input>
                         <div>
-                          <p className={styles.formlabel}>URL</p>
+                          <p className={styles.formlabel}>Image URL</p>
                           <input
                             className={styles.prodinput}
-                            type="text"
+                            type="url"
                             value={image_url}
+                            placeholder="http://www.example.com"
                             onChange={(e) => {
                               setImage_url(e.target.value);
                             }}
@@ -197,7 +225,7 @@ const Product = () => {
                         <button
                           className={styles.submitbtn}
                           onClick={() => {
-                            updateUser();
+                            updateItem();
                             refresh();
                           }}
                         >

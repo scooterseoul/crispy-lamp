@@ -1,0 +1,67 @@
+.prodlogo {
+  background: rgb(84, 84, 84);
+  box-shadow: 0rem 0.25rem 0.5rem 0 rgb(115, 113, 113);
+  height: 2.5rem;
+}
+.prodlogopic {
+  padding-top: 0.2rem;
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+.addtext {
+  text-align: center;
+}
+.addProd {
+  width: 14rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+
+  margin: 0;
+  text-align: center;
+  color: rgb(56, 182, 255);
+}
+.outer {
+  background-size: 100vh;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addCont {
+  width: 80vw;
+  background-color: rgb(84, 84, 84);
+  text-align: center;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.35rem 0.5rem 0 rgb(115, 113, 113);
+}
+.formlabel {
+  margin: 0;
+  padding: 0.3rem;
+  color: white;
+}
+.prodinput {
+  width: 80%;
+  border: 0;
+}
+.addbtn {
+  background-color: rgb(84, 84, 84);
+  border-style: solid;
+  box-shadow: 0 0.3rem 0.3rem 0 rgb(43, 40, 40);
+  border-width: 0.07rem;
+  border-color: white;
+  border-radius: 0.5rem;
+  color: white;
+  margin-top: 0.7rem;
+  border-radius: 0.2rem;
+  text-align: right;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.backbtn {
+  width: 2.3rem;
+
+  padding-left: 0.5rem;
+  margin-top: 1.5rem;
+}

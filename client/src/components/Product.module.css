@@ -2,11 +2,13 @@
   padding: 0;
 }
 .prodlogo {
+  background: rgb(84, 84, 84);
   box-shadow: 0rem 0.25rem 0.5rem 0 rgb(115, 113, 113);
+  height: 2.5rem;
 }
 .prodlogopic {
   padding-top: 0.2rem;
-  width: 4rem;
+  height: 2rem;
   padding-left: 0.5rem;
 }
 .photoCont {
@@ -32,24 +34,30 @@
   padding-right: 1.5rem;
 }
 .updatebtn {
-  background-color: green;
+  background-color: rgb(84, 84, 84);
+  border-style: solid;
+  box-shadow: 0 0.3rem 0.3rem 0 rgb(129, 127, 127);
+  border-width: 0.07rem;
+  border-color: white;
+  border-radius: 0.5rem;
   color: white;
-  border: none;
-  border-radius: 0.2rem;
   text-align: right;
   padding: 0.2rem;
+  font-size: 1.2rem;
 }
 .delbtn {
   text-align: left;
   padding-left: 1.5rem;
 }
 .deletebutton {
-  background-color: rgb(221, 6, 6);
-  color: white;
-  border: none;
+  background-color: rgb(254, 253, 253);
+  color: rgb(193, 6, 6);
+  border-color: rgb(193, 6, 6);
+  border-style: solid;
   border-radius: 0.2rem;
   text-align: right;
   padding: 0.2rem;
+  font-size: 1.2rem;
 }
 .rtnbutton {
   text-align: left;
@@ -80,10 +88,13 @@
   width: 80%;
 }
 .submitbtn {
-  background-color: green;
+  background-color: rgb(84, 84, 84);
+  border-style: solid;
+  border-color: white;
+  border-width: 0.1rem;
+  box-shadow: 0 0.3rem 0.3rem 0 rgb(43, 40, 40);
   color: white;
-  border: none;
-  margin-top: 0.7rem;
-  border-radius: 0.2rem;
-  text-align: right;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
