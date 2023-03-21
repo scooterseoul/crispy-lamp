@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import styles from "./AddProducts.module.css";
-import Logo from "../images/logo.png";
+import Logo from "../images/newlog.png";
 import addprod from "../images/addprod.png";
 import Backbtn from "../images/icons8-back-arrow-100.png";
 
@@ -10,6 +10,7 @@ const AddProducts = () => {
   const [price, setPrice] = useState("");
   const [country, setCountry] = useState("");
   const [image_url, setImage_url] = useState("");
+  const [url_add, setUrl_add] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [errorStatus, setErrorStatus] = useState("");
@@ -90,12 +91,23 @@ const AddProducts = () => {
               className={styles.prodinput}
               onChange={(e) => setCountry(e.target.value)}
             ></input>
-            <p className={styles.formlabel}>URL</p>
+            <p className={styles.formlabel}>Web Address</p>
 
             <input
-              type="text"
+              type="url"
+              name="webaddress"
+              value={url_add}
+              className={styles.prodinput}
+              placeholder="http://www.example.com"
+              onChange={(e) => setUrl_add(e.target.value)}
+            ></input>
+            <p className={styles.formlabel}>Image URL</p>
+
+            <input
+              type="url"
               name="image_url"
               value={image_url}
+              placeholder="http://www.example.com"
               className={styles.prodinput}
               onChange={(e) => setImage_url(e.target.value)}
             ></input>

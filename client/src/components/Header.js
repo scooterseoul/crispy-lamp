@@ -1,7 +1,6 @@
 import styles from "./Header.module.css";
 import Logo from "../images/newlog.png";
 import Login from "../images/icons8-male-user-100.png";
-import Slide from "./Slide";
 import { Link } from "react-router-dom";
 import circular from "../images/sidepichead.png";
 import choc2 from "../images/HDpexels-george-dolgikh-2072163.jpg";
@@ -20,10 +19,9 @@ const Header = () => {
         <div className={styles.explore}>
           ...explore the world of Sweetness!
           <div className={styles.worldChocCont}>
-            <button className={styles.worldChoc}>
-              World Chocolate Day
-              <Link to="https://damecacao.com/world-chocolate-day/"></Link>
-            </button>
+            <Link to="https://damecacao.com/world-chocolate-day/">
+              <button className={styles.worldChoc}>World Chocolate Day</button>
+            </Link>
           </div>
         </div>
         <div className={styles.circular}>

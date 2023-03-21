@@ -2,7 +2,7 @@ import styles from "./AllProducts.module.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import Addbtn from "../images/icons8-add-96gray.png";
+import Addbtn from "../images/grayplusborder.png";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);

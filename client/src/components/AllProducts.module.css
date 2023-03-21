@@ -48,9 +48,10 @@ li {
   padding-top: 0.2rem;
 }
 .photos {
-  width: 5rem;
-  height: 4rem;
+  /* width: 5rem; */
+  height: 5rem;
   text-align: center;
+  padding-top: 1rem;
 }
 .name {
   font-size: 0.8rem;
