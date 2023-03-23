@@ -1,18 +1,34 @@
+.addFavSweets {
+  padding-top: 1.5rem;
+  text-align: center;
+}
+.favsweets {
+  width: 90%;
+}
+.introCont {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
 .addProduct {
   text-align: center;
   align-self: center;
-  margin-top: -1.8rem;
+  margin-top: -4.3rem;
+  background: rgb(84, 84, 84);
+  background: linear-gradient(
+    0deg,
+    rgba(84, 84, 84, 1) 0%,
+    rgba(255, 255, 255, 1) 50%
+  );
 }
 .addbtnpic {
   width: 4rem;
+  z-index: 2;
 }
-
-.banner {
-  margin-bottom: 0.5rem;
-  margin-top: -0.5rem;
-}
-.bannerpic {
-  max-width: 100vw;
+.worldChocCont {
+  padding-top: 0.2rem;
+  padding-bottom: 1rem;
 }
 
 li {
@@ -63,4 +79,12 @@ li {
 }
 .country {
   font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 48rem) {
+  .listCont {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 }

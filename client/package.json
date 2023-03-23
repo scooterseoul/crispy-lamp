@@ -13,6 +13,8 @@
     "react-hook-form": "^7.43.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
+    "react-select": "^5.7.1",
+    "react-select-country-list": "^2.2.3",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
     "web-vitals": "^2.1.4"
