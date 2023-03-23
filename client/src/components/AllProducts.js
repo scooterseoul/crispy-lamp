@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import Addbtn from "../images/grayplusborder.png";
 import Footer from "./Footer";
+import FavSweets from "../images/allProdHeader.png";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -30,6 +31,16 @@ const AllProducts = () => {
         <Link to="/add">
           <img src={Addbtn} className={styles.addbtnpic} alt="add"></img>
         </Link>
+      </div>
+      <div className={styles.addFavSweets}>
+        <img src={FavSweets} className={styles.favsweets} alt="favorites"></img>
+      </div>
+      <div className={styles.introCont}>
+        <p className={styles.intro}>
+          Welcome! Here are some of our favorite chocolates, candies, and sweet
+          things from around the globe. Feel free to add or share your own sweet
+          favorites.
+        </p>
       </div>
       <ul className={styles.listCont}>
         {products.map((product) => {

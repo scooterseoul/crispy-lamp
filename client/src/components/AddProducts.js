@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import styles from "./AddProducts.module.css";
 import Logo from "../images/newlog.png";
-import addprod from "../images/addprod.png";
+import addprod from "../images/addSweet.png";
 import Backbtn from "../images/icons8-back-arrow-96gray.png";
 
 const AddProducts = () => {
