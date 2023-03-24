@@ -238,10 +238,11 @@ const Product = () => {
                   </div>
                   <div className={styles.delbtn}>
                     <button
+                      disabled={true}
                       className={styles.deletebutton}
                       onClick={() => submit(item.id)}
                     >
-                      Delete
+                      Delete -disabled
                     </button>
                   </div>
                 </div>
