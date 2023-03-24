@@ -1,8 +1,6 @@
 import styles from "./Header.module.css";
 import Logo from "../images/logoWHBG.png";
-// import Login from "../images/icons8-male-user-100.png";
 import { Link } from "react-router-dom";
-
 import EmailIcon from "../images/emailIcon.png";
 import GreenTop from "../images/test.png";
 import wcd from "../images/testbtm.png";

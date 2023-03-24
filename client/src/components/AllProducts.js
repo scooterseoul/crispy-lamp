@@ -6,7 +6,6 @@ import Addbtn from "../images/grayplusborder.png";
 import Footer from "./Footer";
 import FavSweets from "../images/explorePic.png";
 import wcdDTPic from "../images/chocday2.png";
-// import PriceFilter from "./PriceFilter";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -63,7 +62,6 @@ const AllProducts = () => {
             own sweet favorites.
           </p>
         </div>
-        {/* <PriceFilter /> */}
         <ul className={styles.listCont}>
           {products.map((product) => {
             return (
