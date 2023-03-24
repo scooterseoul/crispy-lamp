@@ -1,5 +1,7 @@
 .listCont1 {
   padding: 0;
+  width: 100%;
+  margin: 0 auto;
 }
 .prodlogo {
   background: rgb(84, 84, 84);
@@ -15,9 +17,12 @@
 }
 .photoCont {
   text-align: center;
+  padding-top: 1rem;
+  width: 50vw;
+  margin: 0 auto;
 }
 .photos {
-  width: 70vw;
+  width: 50vw;
 }
 .infoCont {
   text-align: center;
@@ -54,6 +59,7 @@
   padding-top: 3.5rem;
   display: grid;
   grid-template-columns: 1fr;
+  margin: 0 auto;
 }
 .prodUpdateBtnCont {
   text-align: center;
@@ -115,4 +121,31 @@
   border-radius: 0.5rem;
   font-size: 1.2rem;
   margin-top: 1rem;
+}
+
+@media only screen and (min-width: 25rem) {
+  .photos {
+    text-align: center;
+    padding-top: 0;
+    width: 10rem;
+    margin: 0 auto;
+  }
+  /* POPUP */
+  .updatetxt {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 46rem) {
+  .photos {
+    width: 19rem;
+  }
+
+  .popupCont {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
 }
