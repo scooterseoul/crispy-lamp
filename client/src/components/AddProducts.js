@@ -21,13 +21,16 @@ const AddProducts = () => {
 
     const body = { name, price, country, image_url, url_add };
 
-    const response = await fetch("http://localhost:5000/api/v1/products/add", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/api/v1/products/add`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      }
+    );
     if (!response.ok) {
       setIsError(true);
       setErrorStatus(response.status);

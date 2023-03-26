@@ -24,7 +24,7 @@ const Product = () => {
   useEffect(() => {
     const fetchData = async () => {
       const fetchUrl = await fetch(
-        `http://localhost:5000/api/v1/products/${id}`
+        `${process.env.REACT_APP_API_URL}/api/v1/products/${id}`
       );
       if (fetchUrl.ok === false) {
         setIsNotFound(true);
@@ -46,7 +46,7 @@ const Product = () => {
   const deleteProduct = async () => {
     try {
       const deleteProduct = await fetch(
-        `http://localhost:5000/api/v1/products/${id}`,
+        `${process.env.REACT_APP_API_URL}/api/v1/products/${id}`,
         { method: "DELETE" }
       );
       navigate("/");
@@ -83,7 +83,7 @@ const Product = () => {
   function updateItem() {
     let item = { name, price, country, image_url, url_add };
     console.warn("item", item);
-    fetch(`http://localhost:5000/api/v1/products/edit/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/products/edit/${id}`, {
       method: "PUT",
       headers: {
         Accept: "application/json",
