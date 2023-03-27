@@ -2,7 +2,7 @@
 
 <div>
 
-<img width=50% alt="sample" src="../crispy-lamp/client/src/images/Multisample.png">
+![img](./client/src/images/Multisample.png)
 
 </div>
 
@@ -13,11 +13,10 @@ A PERN stack CRUD application for users to view and contribute their recommendat
 ### Demo: https://ay-choc-front.onrender.com/
 
 <div>
-<img width=15% alt="sample" src="../crispy-lamp/client/src/images/M-main_samsung-galaxys20ultra-cosmicgrey-portrait.png">
-<img width=15% alt="sample" src="../crispy-lamp/client/src/images/M-pg2_samsung-galaxys20ultra-cosmicgrey-portrait.png">
-<img width=15% alt="sample" src="../crispy-lamp/client/src/images/M-pg3_samsung-galaxys20ultra-cosmicgrey-portrait.png">
-<img width=15% alt="sample" src="../crispy-lamp/client/src/images/M-pg4_samsung-galaxys20ultra-cosmicgrey-portrait.png">
-</div>
+![img](./client/src/images/M-main_samsung-galaxys20ultra-cosmicgrey-portrait.png)
+![img](./client/src/images/M-pg2_samsung-galaxys20ultra-cosmicgrey-portrait.png)
+![img](./client/src/images/M-pg3_samsung-galaxys20ultra-cosmicgrey-portrait.png)
+![img](./client/src/images/M-pg4_samsung-galaxys20ultra-cosmicgrey-portrait.png)
 
 ### Features
 
