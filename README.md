@@ -13,10 +13,10 @@ A PERN stack CRUD application for users to view and contribute their recommendat
 ### Demo: https://ay-choc-front.onrender.com/
 
 <div>
-![img](./client/src/images/M-main_samsung-galaxys20ultra-cosmicgrey-portrait.png)
-![img](./client/src/images/M-pg2_samsung-galaxys20ultra-cosmicgrey-portrait.png)
-![img](./client/src/images/M-pg3_samsung-galaxys20ultra-cosmicgrey-portrait.png)
-![img](./client/src/images/M-pg4_samsung-galaxys20ultra-cosmicgrey-portrait.png)
+![img](./client/src/images/m-main.png)
+![img](./client/src/images/m-pg2.png)
+![img](./client/src/images/m-pg3.png)
+![img](./client/src/images/m-pg4.png)
 
 ### Features
 
