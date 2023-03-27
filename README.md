@@ -13,10 +13,10 @@ A PERN stack CRUD application for users to view and contribute their recommendat
 ### Demo: https://ay-choc-front.onrender.com/
 
 <div>
-![img](./client/src/images/m-main.png)
-![img](./client/src/images/m-pg2.png)
-![img](./client/src/images/m-pg3.png)
-![img](./client/src/images/m-pg4.png)
+<img width=15% alt="sample" src="/client/src/images/m-main.png">
+<img width=15% alt="sample" src="/client/src/images/m-pg2.png">
+<img width=15% alt="sample" src="/client/src/images/m-pg3.png">
+<img width=15% alt="sample" src="/client/src/images/m-pg4.png">
 
 ### Features
 
