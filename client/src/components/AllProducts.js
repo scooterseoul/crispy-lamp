@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import Addbtn from "../images/grayplusborder.png";
 import Footer from "./Footer";
-import FavSweets from "../images/explorePic.png";
+import ExplorePic from "../images/explorePic.png";
+import FavSweets from "../images/addyoursuggest.png";
 import wcdDTPic from "../images/chocday2.png";
 
 const AllProducts = () => {
@@ -32,10 +33,20 @@ const AllProducts = () => {
       <Header />
       <div className={styles.contentCont}>
         <div className={styles.addCont}>
+          <div className={styles.explorePicCont}>
+            <img src={ExplorePic} alt="explore" className={styles.explorepic} />
+          </div>
           <div className={styles.addProduct}>
             <Link to="/add">
               <img src={Addbtn} className={styles.addbtnpic} alt="add"></img>
             </Link>
+            <div className={styles.addFavSweets}>
+              <img
+                src={FavSweets}
+                className={styles.favsweets}
+                alt="favorites"
+              ></img>
+            </div>
           </div>
           <div className={styles.wcdDT}>
             <Link
@@ -49,21 +60,15 @@ const AllProducts = () => {
               ></img>
             </Link>
           </div>
+          <div className={styles.introCont}>
+            <p className={styles.intro}>
+              Welcome! Here are some of our favorite chocolates, candies, and
+              sweet things from around the globe. Feel free to add or share your
+              own sweet favorites.
+            </p>
+          </div>
         </div>
-        <div className={styles.addFavSweets}>
-          <img
-            src={FavSweets}
-            className={styles.favsweets}
-            alt="favorites"
-          ></img>
-        </div>
-        <div className={styles.introCont}>
-          <p className={styles.intro}>
-            Welcome! Here are some of our favorite chocolates, candies, and
-            sweet things from around the globe. Feel free to add or share your
-            own sweet favorites.
-          </p>
-        </div>
+
         <ul className={styles.listCont}>
           {products.map((product) => {
             return (
