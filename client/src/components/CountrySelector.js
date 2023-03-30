@@ -14,6 +14,9 @@ const CountrySelector = ({ products, setFilteredProducts }) => {
       setFilteredProducts(products);
     }
   };
+  const uniqueCountries = [
+    ...new Set(products.map((product) => product.country)),
+  ];
   return (
     <div className={styles.dropCont}>
       <label htmlFor="country-select" className={styles.label}>
@@ -28,11 +31,14 @@ const CountrySelector = ({ products, setFilteredProducts }) => {
         <option className={styles.option} value="">
           All Countries
         </option>
-        {products.map((product) => (
-          <option key={product.id} value={product.country}>
-            {product.country}
-          </option>
-        ))}
+
+        {uniqueCountries
+          .sort((a, b) => a.localeCompare(b))
+          .map((country) => (
+            <option key={country} value={country}>
+              {country}
+            </option>
+          ))}
       </select>
     </div>
   );
