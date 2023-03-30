@@ -195,6 +195,7 @@ li {
   }
   .wcdDT {
     grid-column: 3/4;
+    max-width: 16rem;
   }
   .wcdDTPic {
     display: block;
@@ -222,6 +223,9 @@ li {
   }
   .intro {
     font-size: 1rem;
+  }
+  .dropCont {
+    width: 46rem;
   }
 
   .listitem {

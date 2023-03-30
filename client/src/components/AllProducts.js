@@ -7,10 +7,11 @@ import Footer from "./Footer";
 import ExplorePic from "../images/explorePic.png";
 import FavSweets from "../images/addyoursuggest.png";
 import wcdDTPic from "../images/chocday2.png";
-
+import CountrySelector from "./CountrySelector";
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,6 +20,7 @@ const AllProducts = () => {
       );
       const data = await response.json();
       setProducts(data);
+      setFilteredProducts(data);
       setIsLoading(false);
     };
     fetchData();
@@ -68,9 +70,13 @@ const AllProducts = () => {
             </p>
           </div>
         </div>
-
+        <CountrySelector
+          products={products}
+          setFilteredProducts={setFilteredProducts}
+          className={styles.countrySelector}
+        />
         <ul className={styles.listCont}>
-          {products.map((product) => {
+          {filteredProducts.map((product) => {
             return (
               <li key={product.id} className={styles.listitem}>
                 <div className={styles.cell}>
