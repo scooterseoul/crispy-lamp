@@ -141,6 +141,16 @@
     width: 19rem;
   }
 
+  .photoCont {
+    text-align: center;
+    padding-top: 1rem;
+    width: 50vw;
+    margin: 0 auto;
+  }
+  .photos {
+    width: 50vw;
+  }
+
   .popupCont {
     position: fixed;
     top: 0;

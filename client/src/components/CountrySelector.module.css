@@ -1,32 +1,28 @@
 .dropCont {
-  padding-left: 0.2rem;
-  padding-bottom: 0.3rem;
+  padding: 0.3rem 0.2rem 0 0.2rem;
 }
 .select {
-  background-color: rgb(84, 84, 84);
-  color: white;
+  background-color: #545454;
+  color: #fff;
   border-radius: 0.2rem;
   border-width: 0.2rem;
 }
 .label {
-  color: rgb(84, 84, 84);
+  color: #545454;
   padding-right: 0.1rem;
 }
-@media only screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   .label {
-    color: white;
+    color: #fff;
     font-size: 1rem;
     padding-right: 1rem;
   }
   .dropCont {
-    padding-left: 0;
+    padding: 0;
     width: 70rem;
     margin: 0 auto;
   }
   .select {
-    background-color: rgb(84, 84, 84);
-    color: white;
-    border-radius: 0.2rem;
     font-size: 1rem;
     padding-left: 1rem;
   }

@@ -27,7 +27,7 @@ const AllProducts = () => {
   }, []);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p>Cranking up the database... Just a moment</p>;
   }
 
   return (
