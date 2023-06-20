@@ -10,7 +10,7 @@
 
 A PERN stack CRUD application for users to view and contribute their recommendations.
 
-### Demo: https://ay-choc-front.onrender.com/
+<!---### Demo: https://ay-choc-front.onrender.com/--->
 
 <div>
 <img width=15% alt="sample" src="/client/src/images/m-main.png">
