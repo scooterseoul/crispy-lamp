@@ -3,9 +3,9 @@
 }
 .headerCont {
   display: grid;
-  height: 100vh;
+  /* height: 100vh; */
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 5fr 5fr;
+  /* grid-template-rows: 1fr 5fr 5fr; */
   background-color: white;
 }
 
@@ -16,9 +16,10 @@
   grid-row-start: 1;
   grid-row-end: 2;
   align-self: center;
+  padding-top: 0.2rem;
 }
 .logopic {
-  width: 3rem;
+  width: 2.5rem;
 }
 .email {
   height: 2rem;
@@ -32,20 +33,27 @@
   padding-right: 0.5rem;
 }
 .emailPic {
-  width: 1.5rem;
+  width: 1.3rem;
 }
-.grtophalf {
+.mainPicCont {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+.grtophalf {
+  background-color: rgb(60, 60, 60, 0.7);
+}
+.grtophalf img {
   width: 100%;
 }
-.greenTop {
-  height: 42vh;
-  width: 100vw;
+.heroLand {
+  display: none;
 }
-.wcdCont {
+/* .greenTop {
+  height: 100vh;
+} */
+/* .wcdCont {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 3;
@@ -58,13 +66,12 @@
   border-bottom: 0.45rem;
   border-bottom-style: solid;
   border-color: white;
-}
+} */
 
-@media only screen and (min-width: 25rem) {
+@media only screen and (max-width: 940px) and (orientation: landscape) {
   .headerCont {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 6rem;
     padding-bottom: 0;
   }
   .logo {
@@ -78,28 +85,49 @@
   .email {
     padding-top: 0;
     padding-right: 2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
   .emailPic {
     width: 2rem;
   }
+  .grtophalf {
+    display: none;
+  }
+  .heroLand {
+    display: block;
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin: 0 auto;
+  }
+  .heroLand img {
+    width: 100%;
+  }
 
-  .greenTop {
+  /* .greenTop {
     display: none;
   }
 
   .wcdpic {
     display: none;
-  }
+  } */
 }
 @media only screen and (min-width: 46rem) {
+  .header {
+    padding: 0;
+  }
   .headerCont {
     display: grid;
     grid-template-rows: 1fr;
-    height: 2.5rem;
+  }
+  .mainPicCont {
+    grid-row: 1/-1;
   }
   .logo {
-    padding-left: 0.4rem;
-    padding-top: 0.1rem;
+    /* padding-left: 0.4rem;
+    padding-top: 0.1rem; */
+    display: none;
   }
   .logopic {
     width: 2.5rem;
@@ -109,6 +137,20 @@
     padding-right: 1rem;
   }
   .emailPic {
-    width: 1.5rem;
+    /* width: 1.5rem; */
+    display: none;
+  }
+  .grtophalf {
+    display: none;
+  }
+  .heroLand {
+    display: block;
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin: 0 auto;
+  }
+  .heroLand img {
+    width: 100%;
   }
 }

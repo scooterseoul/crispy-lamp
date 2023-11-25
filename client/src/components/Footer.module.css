@@ -1,40 +1,83 @@
 .footer {
   width: 100%;
-  background: rgb(84, 84, 84);
-  height: 2rem;
+  background: rgb(60, 60, 60);
+  /* height: 2rem;
+
+  bottom: 0; */
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  align-self: end;
+  justify-self: stretch;
 }
 .footerNav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-size: 1rem;
-  background-color: rgb(84, 84, 84);
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  background-color: rgb(60, 60, 60);
   text-align: center;
   padding: 0;
   padding-top: 0.2rem;
+  list-style-type: none;
+  padding-bottom: 1rem;
 }
-.footerTitle {
-  text-align: center;
-  text-decoration: none;
-  color: white;
+.mePhoto {
+  width: 3rem;
+  /* border-radius: 30% 70% 56% 44% / 30% 22% 78% 70%; */
+  /* box-shadow: 0.25rem 0rem 0.4rem 0 rgb(93, 91, 91); */
+  margin: 0 auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-radius: 0.5rem;
 }
 .email {
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   color: white;
-}
-.thanksCont {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  margin: 0 auto;
+  align-self: center;
+  font-weight: bold;
 }
 .thanks {
+  grid-column: 1/2;
+  grid-row: 2/5;
   text-align: center;
   color: white;
+  padding-left: 0.5rem;
 }
-.ghicon {
-  width: 2.5rem;
-  padding: 0.2rem;
+.thanksCont a {
+  color: white;
+  font-weight: bold;
 }
-.linkdinIcon {
-  width: 2.5rem;
-  padding: 0.2rem;
+.iconCont {
+  grid-column: 2/-1;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  margin: 0 auto;
+}
+.connectIcons {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem;
+  align-items: center;
+}
+.githubIcon,
+.linkedInIcon,
+.emailPic {
+  grid-row: 1/2;
+  margin: 0 auto;
+  width: 1.5rem;
+}
+.iconName {
+  text-align: left;
+}
+@media only screen and (min-width: 46rem) {
+  .footerNav {
+    width: 50%;
+    margin: 0 auto;
+  }
 }

@@ -6,6 +6,7 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import Pop from "./Popup";
 import Logo from "../images/newlog.png";
 import Backbtn from "../images/icons8-back-arrow-96gray.png";
+import Footer from "./Footer";
 
 const Product = () => {
   const { id } = useParams();
@@ -72,14 +73,6 @@ const Product = () => {
     });
   };
 
-  function selectProduct(id) {
-    let item = product[id - 1];
-    setName(item.name);
-    setPrice(item.price);
-    setCountry(item.country);
-    setImage_url(item.image_url);
-    setUrl_add(item.url_add);
-  }
   function updateItem() {
     let item = { name, price, country, image_url, url_add };
     console.warn("item", item);
@@ -140,8 +133,10 @@ const Product = () => {
                     <div className={styles.name}>{item.name}</div>
                     <div className={styles.price}>Avg. {item.price}</div>
                     <div className={styles.country}>{item.country}</div>
+                    <div className={styles.biz_description}>
+                      {item.biz_description}
+                    </div>
 
-                    {/* <div className={styles.country}>{item.url_add}</div> */}
                     <Link to={`${item.url_add}`} target="_blank">
                       <button
                         onClick={renderOnClickRight}
@@ -242,7 +237,7 @@ const Product = () => {
                       className={styles.deletebutton}
                       onClick={() => submit(item.id)}
                     >
-                      Delete -disabled
+                      Delete &#9888;
                     </button>
                   </div>
                 </div>
@@ -260,6 +255,7 @@ const Product = () => {
           })}
         </ul>
       </div>
+      <Footer />
     </>
   );
 };

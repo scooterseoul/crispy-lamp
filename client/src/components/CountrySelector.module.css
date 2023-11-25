@@ -1,17 +1,19 @@
 .dropCont {
-  padding: 0.3rem 0.2rem 0 0.2rem;
+  padding: 0.3rem 0.2rem 1rem 0.5rem;
 }
 .select {
-  background-color: #545454;
-  color: #fff;
-  border-radius: 0.2rem;
-  border-width: 0.2rem;
+  /* background-color: #545454; */
+  color: rgb(60, 60, 60);
+  border-radius: 0.1rem;
+  border-width: 0.1rem;
+  font-size: 0.8rem;
 }
 .label {
   color: #545454;
   padding-right: 0.1rem;
+  font-size: 0.8rem;
 }
-@media (min-width: 40rem) {
+@media (min-width: 46rem) {
   .label {
     color: #fff;
     font-size: 1rem;
@@ -19,11 +21,17 @@
   }
   .dropCont {
     padding: 0;
-    width: 70rem;
     margin: 0 auto;
+    /* margin: 0 0 2rem 0; */
+
+    width: 70%;
+    padding-bottom: 1.5rem;
   }
   .select {
     font-size: 1rem;
     padding-left: 1rem;
+  }
+  .label {
+    padding: 0;
   }
 }

@@ -1,14 +1,15 @@
-import styles from "./AllProducts.module.css";
+import styles from "./Products.module.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Addbtn from "../images/grayplusborder.png";
 import Footer from "./Footer";
 import ExplorePic from "../images/explorePic.png";
-import FavSweets from "../images/addyoursuggest.png";
+// import FavSweets from "../images/addyoursuggest.png";
 import wcdDTPic from "../images/chocday2.png";
 import CountrySelector from "./CountrySelector";
-const AllProducts = () => {
+
+const Products = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -29,10 +30,21 @@ const AllProducts = () => {
   if (isLoading) {
     return <p>Cranking up the database... Just a moment</p>;
   }
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+  const scrollToTop = (behavior) => {
+    window.scrollTo({
+      top: 0,
+      behavior: behavior,
+    });
+  };
 
   return (
     <>
-      <Header />
+      <div>
+        <Header />
+      </div>
       <div className={styles.contentCont}>
         <div className={styles.addCont}>
           <div className={styles.explorePicCont}>
@@ -40,14 +52,20 @@ const AllProducts = () => {
           </div>
           <div className={styles.addProduct}>
             <Link to="/add">
-              <img src={Addbtn} className={styles.addbtnpic} alt="add"></img>
+              <img
+                src={Addbtn}
+                className={styles.addbtnpic}
+                alt="add"
+                onClick={scrollTop}
+              ></img>
             </Link>
             <div className={styles.addFavSweets}>
-              <img
+              {/* <img
                 src={FavSweets}
                 className={styles.favsweets}
                 alt="favorites"
-              ></img>
+              ></img> */}
+              <p className={styles.favsweets}>Add your favorites</p>
             </div>
           </div>
           <div className={styles.wcdDT}>
@@ -75,36 +93,46 @@ const AllProducts = () => {
           setFilteredProducts={setFilteredProducts}
           className={styles.countrySelector}
         />
-        <ul className={styles.listCont}>
-          {filteredProducts.map((product) => {
-            return (
-              <li key={product.id} className={styles.listitem}>
-                <div className={styles.cell}>
-                  <Link
-                    to={"/products/" + product.id}
-                    className={styles.linkpic}
-                  >
-                    <div className={styles.photoCont}>
-                      <img
-                        src={product.image_url}
-                        alt={product.name}
-                        className={styles.photos}
-                      />
+        <div className={styles.listCont}>
+          <ul className={styles.list}>
+            {filteredProducts.map((product) => {
+              return (
+                <li key={product.id} className={styles.listitem}>
+                  <div className={styles.cell}>
+                    <Link
+                      to={"/products/" + product.id}
+                      className={styles.linkpic}
+                    >
+                      <div className={styles.photoCont}>
+                        <img
+                          src={product.image_url}
+                          alt={product.name}
+                          className={styles.photos}
+                        />
+                      </div>
+                    </Link>
+                    <div className={styles.infoCont}>
+                      <div className={styles.name}>{product.name}</div>
+                      {/* <div className={styles.price}>{product.price}</div> */}
+                      <div className={styles.country}>{product.country}</div>
                     </div>
-                  </Link>
-                  <div className={styles.infoCont}>
-                    <div className={styles.name}>{product.name}</div>
-                    {/* <div className={styles.price}>{product.price}</div> */}
-                    <div className={styles.country}>{product.country}</div>
                   </div>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className={styles.buttonToTop}>
+          <button
+            className={styles.backToTopButton}
+            onClick={() => scrollToTop("smooth")}
+          >
+            Back to Top
+          </button>
+        </div>
       </div>
       <Footer />
     </>
   );
 };
-export default AllProducts;
+export default Products;

@@ -1,6 +1,6 @@
 .prodlogo {
   background: rgb(84, 84, 84);
-  box-shadow: 0rem 0.25rem 0.5rem 0 rgb(115, 113, 113);
+  /* box-shadow: 0rem 0.25rem 0.5rem 0 rgb(115, 113, 113); */
   height: 2.5rem;
 }
 .prodlogopic {
@@ -15,7 +15,6 @@
   width: 14rem;
   padding-top: 2rem;
   padding-bottom: 1rem;
-
   margin: 0;
   text-align: center;
   color: rgb(56, 182, 255);
@@ -30,25 +29,28 @@
 }
 .addCont {
   width: 80vw;
-  background-color: rgb(84, 84, 84);
+  background-color: rgb(255, 255, 255);
   text-align: center;
   padding-top: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   box-shadow: 0rem 0.35rem 0.5rem 0 rgb(115, 113, 113);
+  border: rgb(84, 84, 84) 0.1rem solid;
+  font-size: 0.8rem;
 }
 .formlabel {
   margin: 0;
   padding: 0.3rem;
-  color: white;
+  color: rgb(84, 84, 84);
 }
 .prodinput {
   width: 80%;
-  border: 0;
+  border: rgb(84, 84, 84) 0.1rem solid;
+  border-radius: 0.2rem;
 }
 .addbtn {
   background-color: rgb(84, 84, 84);
   border-style: solid;
-  box-shadow: 0 0.3rem 0.3rem 0 rgb(43, 40, 40);
+  /* box-shadow: 0 0.3rem 0.3rem 0 rgb(43, 40, 40); */
   border-width: 0.07rem;
   border-color: white;
   border-radius: 0.5rem;
@@ -57,7 +59,7 @@
   border-radius: 0.2rem;
   text-align: right;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .backbtn {
   width: 2.3rem;

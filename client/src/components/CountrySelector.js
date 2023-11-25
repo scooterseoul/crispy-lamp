@@ -20,7 +20,7 @@ const CountrySelector = ({ products, setFilteredProducts }) => {
   return (
     <div className={styles.dropCont}>
       <label htmlFor="country-select" className={styles.label}>
-        Select:
+        {/* Select: */}
       </label>
       <select
         id="country-select"
